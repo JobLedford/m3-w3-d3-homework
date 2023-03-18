@@ -1,0 +1,95 @@
+@import "./colors.scss";
+@mixin margins {
+    margin-top:20px;
+    margin-bottom:20px;
+}
+@mixin page-format-p {
+    display: flex;
+}
+@mixin page-format-c {
+    flex: 1;
+}
+
+/* Variables */
+$font-1: Arial, Helvetica, Sans-serif;
+$font-2: Sacramento, cursive;
+//Navigation bar
+body {
+  background-color: $color-o;
+  nav {
+    overflow: hidden;
+    background-color: $color-o;
+    top: 0;
+    width: 100%;
+    ul {
+      text-align: left;
+      list-style-type: none;
+      margin: 0;
+      padding: 15px;
+      li {
+        display: inline;
+        font-family: $font-1;
+        font-size: 17px;
+        color: $color-W;
+        a {
+          color: $color-W;
+          text-decoration: none;
+          padding: 14px;
+        }
+      }
+    }
+  }
+  main {
+    height:35em;
+    width: 100%;
+    text-align:center;
+    background-color: $color-W;
+    @include page-format-p;
+    #intro-text {
+        @include margins;
+        margin-left: 25px;
+        padding: 3em;
+        background-color: $color-g;
+        font-family: $font-1;
+        @include page-format-c;
+        span {
+            font-family: $font-2;
+            font-size: 35px;
+        }
+        h3 {
+            font-family: $font-1;
+            font-size: 35px;
+        }
+        p {
+            font-family: $font-1;
+            font-size: 20px;
+        }
+        .submit-buttton {
+            font-family: $font-1;
+            border: none;
+            color: $color-W;
+            background-color: $color-o;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration:wavy;
+            display: inline-block;
+            font-size: 16px;
+        }
+        .submit-buttton:hover {
+            background-color: $color-W;
+            color: $color-o;
+        }
+        }
+    #intro-image {
+        @include margins;
+        margin-right: 20px;
+        @include page-format-c;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+  }
+}
+
+// Mixin or Extend for button
